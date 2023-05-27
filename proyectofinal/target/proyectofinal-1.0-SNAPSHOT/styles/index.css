@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-family: "HP Simplified", sans-serif;
+    width: 600px;
+    text-align: center;
+}
+img{
+    float: left;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos de navegación */
+nav{
+    background-color: rgba(243, 135, 66, 0.55);
+    color: rgb(82, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 223, 70, 0.76);
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    nav h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
