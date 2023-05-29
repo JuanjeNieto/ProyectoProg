@@ -12,7 +12,7 @@
   <style>
     <%@include file="styles/login.css"%>
     body {
-      background-image: url("styles/images/86338-Portgas-D.-Ace-Marco-One-Piece-Pirate-Fire.jpg");
+      background-image: url("styles/images/879800.jpg");
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -56,6 +56,8 @@
     <button class="button" id="volver-al-inicio-button">Volver al inicio</button>
   </div>
 </div>
-
+<div>
+  <a href="adminIndex.jsp">Si eres admin entra aquí</a>
+</div>
 </body>
 </html>

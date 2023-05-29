@@ -11,7 +11,7 @@
     <title>PANEL SOLICITANTE</title>
 </head>
 <body>
-<h1>Formulario de Ayuda</h1>
+<h1>Bienvenido, <%= session.getAttribute("nombre") %></h1>
 
 <form action="guardarAyuda.jsp" method="post">
     <label for="solicitud">Solicitud:</label>
@@ -23,10 +23,12 @@
     <label for="tipo_ayuda">Tipo de Ayuda:</label>
     <input type="text" name="tipo_ayuda" id="tipo_ayuda" required><br><br>
 
-    <label for="nombre">Nombre del Solicitante:</label>
-    <input type="text" name="nombre" id="nombre" required><br><br>
 
     <input type="submit" value="Guardar">
 </form>
+<div>
+    <p>quiero ver mis ayudas ya solicitadas</p>
+    <a href="vistaMisAyudas.jsp">Ver ayudas</a>
+</div>
 </body>
 </html>
