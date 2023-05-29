@@ -5,10 +5,7 @@
   Time: 19:58
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.*" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -24,25 +21,40 @@
 
     Connection conexion = DriverManager.getConnection(db_url);
 
-    String muestraAyudas = "SELECT id, solicitud, descripcion, tipo_ayuda, solicitante_id, solicitante_nombre, estado FROM ayuda";
+    String nombre = (String) session.getAttribute("nombre");
+    String obtenerSolicitanteId = "SELECT id FROM usuario WHERE nombre = ?";
 
-    Statement stmt = conexion.createStatement();
+    PreparedStatement pstmtObtenerId = conexion.prepareStatement(obtenerSolicitanteId);
+    pstmtObtenerId.setString(1, nombre);
+    ResultSet rsSolicitanteId = pstmtObtenerId.executeQuery();
 
-    ResultSet resultSet = stmt.executeQuery(muestraAyudas);
+    int solicitanteId = 0;
+    if (rsSolicitanteId.next()) {
+        solicitanteId = rsSolicitanteId.getInt("id");
+    }
+
+    pstmtObtenerId.close();
+    rsSolicitanteId.close();
+
+    String muestraAyudas = "SELECT id, solicitud, descripcion, tipo_ayuda, solicitante_id, solicitante_nombre, estado FROM ayuda WHERE solicitante_id = ?";
+
+    PreparedStatement pstmtMuestraAyudas = conexion.prepareStatement(muestraAyudas);
+    pstmtMuestraAyudas.setInt(1, solicitanteId);
+    ResultSet resultSet = pstmtMuestraAyudas.executeQuery();
 %>
 <table class="ayudas" border="1">
     <thead>
     <tr>
         <th>Nombre del solicitante</th>
         <th>Solicitud</th>
-        <th>Descripción</th>
+        <th>DescripciÃ³n</th>
         <th>Necesidad</th>
     </tr>
     </thead>
     <tbody>
     <% while (resultSet.next()) { %>
     <tr>
-        <td><%= session.getAttribute("nombre") %></td>
+        <td><%= resultSet.getString("solicitante_nombre") %></td>
         <td><%= resultSet.getString("solicitud") %></td>
         <td><%= resultSet.getString("descripcion") %></td>
         <td><%= resultSet.getString("tipo_ayuda") %></td>
@@ -53,9 +65,10 @@
 
 <%
     resultSet.close();
-    stmt.close();
+    pstmtMuestraAyudas.close();
     conexion.close();
 %>
+
 
 </body>
 </html>

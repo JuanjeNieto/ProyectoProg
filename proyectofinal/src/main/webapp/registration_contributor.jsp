@@ -12,9 +12,9 @@
     <style>
         <%@include file="styles/user_registration.css"%>
         body {
-            background-image: url("styles/images/687559.png");
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: url("styles/images/fruta-diablo-one-piece.jpg");
+            background-size: auto;
+            background-repeat: repeat;
         }
     </style>
 </head>

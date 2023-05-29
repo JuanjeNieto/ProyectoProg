@@ -2,89 +2,121 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-
-h1{
-    font-family: "HP Simplified", sans-serif;
-    width: 600px;
-    text-align: center;
-}
-img{
-    float: left;
-    border-radius: 5px;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Estilos de navegación */
-nav{
-    background-color: rgba(243, 135, 66, 0.55);
-    color: rgb(82, 0, 0);
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 10px;
 }
 
-nav ul {
+h1 {
+    color: rgba(51, 51, 51, 0.75);
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    margin: 0;
+    background-color: rgba(190, 203, 229, 0.69);
+}
+
+nav#Cuenta {
+    background-color: rgba(51, 51, 51, 0.87);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav#Cuenta ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-nav li {
-    flex: 1;
-    text-align: center;
+nav#Cuenta ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-nav a {
-    color: #fff;
+nav#Cuenta ul li a {
+    color: rgba(255, 255, 255, 0.68);
     text-decoration: none;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-nav a:hover {
-    background-color: rgba(255, 223, 70, 0.76);
+/* Estilos para el contenido */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-nav h1 {
-    margin: 0;
+section {
+    flex: 2;
+    background-color: rgba(215, 190, 50, 0.68);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    flex: 1;
+    background-color: rgba(215, 201, 50, 0.77);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    color: #333;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
-nav img {
-    max-width: 100px;
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para las imágenes */
+img {
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos y textos */
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    nav {
+    h1 {
+        font-size: 24px;
+    }
+
+    nav#Cuenta {
         padding: 10px 0;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-    }
-
-    nav li {
-        flex: 0 0 100%;
+    nav#Cuenta ul li {
+        display: block;
         margin-bottom: 10px;
     }
 
-    nav h1 {
-        font-size: 20px;
-        text-align: center;
+    nav#Cuenta ul li a {
+        font-size: 14px;
+    }
+
+    section, aside {
+        margin: 10px 0;
     }
 }

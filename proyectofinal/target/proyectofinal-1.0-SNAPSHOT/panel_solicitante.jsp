@@ -9,6 +9,14 @@
 <html>
 <head>
     <title>PANEL SOLICITANTE</title>
+    <link rel="stylesheet" type="text/css" href="styles/formularioAyuda.css">
+    <style>
+        body {
+            background-image: url("styles/images/21411.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
 <h1>Bienvenido, <%= session.getAttribute("nombre") %></h1>
@@ -27,7 +35,7 @@
     <input type="submit" value="Guardar">
 </form>
 <div>
-    <p>quiero ver mis ayudas ya solicitadas</p>
+    <p>Quiero ver mis ayudas ya solicitadas:</p>
     <a href="vistaMisAyudas.jsp">Ver ayudas</a>
 </div>
 </body>

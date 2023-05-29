@@ -33,5 +33,17 @@
     <li><a href="Registration_inquirer.jsp">Solicitante</a></li>
   </ul>
 </nav>
+<h2>Qué debes saber antes de registrate</h2>
+<div class="container">
+    <div>
+        <h2>Contribuyente</h2>
+        <p>El contribuyente es aquel individuo o entidad que se encuentra dispuesto a brindar su ayuda y apoyo a los solicitantes. Los contribuyentes pueden ser voluntarios, profesionales, organizaciones sin fines de lucro o cualquier persona que esté dispuesta a ofrecer sus conocimientos, habilidades o recursos para ayudar a aquellos que lo necesitan.</p>
+    </div>
+    <div>
+        <h2>Solicitante</h2>
+        <p>Se encarga de pedir ayuda en situaciones en las que lo necesita. El solicitante puede ser una persona, una organización o cualquier entidad que requiera asistencia o apoyo en alguna área específica. Puede solicitar ayuda en diferentes ámbitos, como servicios sociales, emergencias, proyectos comunitarios, entre otros.</p>
+    </div>
+
+</div>
 </body>
 </html>

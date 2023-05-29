@@ -134,6 +134,36 @@ nav img {
     margin: 0 auto;
     padding: 10px 0;
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(238, 119, 57, 0.6);
+}
+
+.container > div {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container > div:first-child {
+    border-right: 1px solid #ccc;
+}
+
+h2 {
+    color: #d7be32;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 /* Estilos responsivos */
 @media (max-width: 768px) {

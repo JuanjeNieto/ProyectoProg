@@ -14,6 +14,15 @@
 <html>
 <head>
     <title>PANEL CONTRIBUYENTE</title>
+    <link rel="stylesheet" type="text/css" href="styles/formularioAyuda.css">
+    <link rel="stylesheet" type="text/css" href="styles/tabla.css">
+    <style>
+        body {
+            background-image: url("styles/images/gray-background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
 <h1>Bienvenido, <%= session.getAttribute("nombre") %></h1>
@@ -35,8 +44,8 @@
     <tr>
         <th>Nombre del solicitante</th>
         <th>Solicitud</th>
-        <th>descripcion</th>
-        <th>necesidad</th>
+        <th>Descripcion</th>
+        <th>Necesidad</th>
     </tr>
     </thead>
     <tbody>

@@ -56,8 +56,5 @@
     <button class="button" id="volver-al-inicio-button">Volver al inicio</button>
   </div>
 </div>
-<div>
-  <a href="adminIndex.jsp">Si eres admin entra aquí</a>
-</div>
 </body>
 </html>
